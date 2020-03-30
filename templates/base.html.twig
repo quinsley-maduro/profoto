@@ -4,9 +4,29 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li ><a href="https://127.0.0.1:8000/klant/">Klant</a></li>
+                    <li><a href="https://127.0.0.1:8000/product/">Product</a></li>
+                    <li><a href="https://127.0.0.1:8000/factuur/">Factuur</a></li>
+                    <li><a href="https://127.0.0.1:8000/factuur/">mail</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+
+            {% block body %}{% endblock %}
+            {% block javascripts %}{% endblock %}
     </body>
 </html>
